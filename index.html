@@ -16,16 +16,32 @@
 <body>
     <header>
         <nav class="w-11/12 mx-auto flex justify-between items-center py-5 border-b-2 border-[#17171720]">
-            <div><img class="w-[120px]" src="assets/Logo.png" alt=""></div>
-            <div><button class="btn text-lg font-semibold">Short By View</button></div>
-            <div><button class="btn text-lg bg-[#FF1F3D] text-white ">Blog</button></div>
+            <div>
+                <img class="w-[120px]" src="assets/Logo.png" alt="">
+            </div>
+
+            <div>
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                    <input id="search_input" type="search" required placeholder="Search"/>
+                  </label>
+            </div>
+
+            <div>
+                <button class="btn text- bg-[#FF1F3D] text-white ">Short By View</button>
+            </div>
+
         </nav>
     </header>
+
     <nav id="category-container" class=" py-5 flex justify-center gap-4">
        <div>
         <button id="btn-all" onclick="loadVideos()" class="btn btn-sm  ">All</button>
        </div>
     </nav>
+    <section id="loader" class=" text-center py-10 hidden">
+        <span class="loading loading-dots loading-xl"></span>
+    </section>
 
     <section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-5">
 

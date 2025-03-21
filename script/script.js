@@ -167,7 +167,7 @@ function displayCategories(categories){
 document.getElementById("search_input").addEventListener("keyup", (e) => {
   const input =e.target.value;
   // console.log(input);
-  loadVideos();
+  loadVideos(input);
   });
   
 loadCategories();
